@@ -59,8 +59,4 @@ https://sg-schools2020.glitch.me/
 
 ## License
 
-MIT License
-
----
-
-**Author:** <a href="https://github.com/hongyime">hongyime</a>
+Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
