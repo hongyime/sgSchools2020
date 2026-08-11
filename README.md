@@ -1,5 +1,10 @@
 # sgSchools2020
 
+Live demo: https://hongyime.github.io/sgSchools2020/
+
+![Project screenshot](./screenshot.png)
+
+
 A comprehensive directory of Singapore schools displayed on a map and as a clickable web list.
 
 ## Description
