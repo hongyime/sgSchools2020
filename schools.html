@@ -2,954 +2,454 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The 2020 Singapore school website archive: 338 links across primary schools, secondary schools, junior colleges, polytechnics and ITE." />
+    <title>Singapore schools — The Prawn Projects</title>
     <style>
-      h2 {
-        text-align: center;
-      }
-      h4 {
-        text-align: left;
-      }
+      * { box-sizing: border-box; }
+      html { color-scheme: light; }
+      body { margin: 0; background: #fff; color: #000; font-family: "Space Grotesk", Arial, sans-serif; line-height: 1.5; }
+      a { color: inherit; text-underline-offset: .2em; }
+      a:focus-visible { outline: 3px solid #000; outline-offset: 4px; }
+      a:hover { text-decoration-thickness: 2px; }
+      .wrap { width: min(1200px, 100%); margin-inline: auto; padding-inline: clamp(20px, 5vw, 64px); }
+      .skip-link { position: absolute; top: 8px; left: 8px; padding: 12px; background: #000; color: #fff; transform: translateY(-160%); z-index: 1; }
+      .skip-link:focus { transform: none; }
+      .masthead { border-bottom: 3px solid #000; }
+      .masthead .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-block: 20px; }
+      .brand { font-weight: 800; text-decoration: none; }
+      .archive { font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+      .hero { padding-block: 48px 36px; }
+      h1 { margin: 0 0 20px; font-size: clamp(2.75rem, 7vw, 5rem); font-weight: 800; line-height: 1.05; letter-spacing: -.05em; }
+      .lede { max-width: 620px; font-size: 1.05rem; }
+      .meta { margin-block: 24px; font-size: .85rem; font-weight: 700; }
+      nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 3px solid #000; box-shadow: 3px 3px #000; font-size: .9rem; font-weight: 700; text-decoration: none; }
+      nav a:hover, nav a:focus-visible { background: #000; color: #fff; }
+      section { border-top: 3px solid #000; padding-block: 24px 40px; scroll-margin-top: 20px; }
+      .section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px; }
+      h2 { margin: 0; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -.035em; line-height: 1.2; }
+      .count { margin: 0; font-size: .8rem; font-weight: 700; }
+      .school-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; list-style: none; padding: 0; margin: 24px 0; }
+      .school-list li { min-width: 0; border-bottom: 1px solid #d4d4d4; }
+      .school-list a { display: flex; align-items: center; min-height: 48px; height: 100%; padding: 12px 4px; font-size: .85rem; overflow-wrap: anywhere; }
+      .back { display: inline-block; padding-block: 8px; font-size: .8rem; font-weight: 700; }
+      footer { border-top: 3px solid #000; padding-block: 28px; font-size: .85rem; }
+      footer p { margin: 8px 0; }
+      @media (max-width: 650px) { .school-list { grid-template-columns: minmax(0, 1fr); } .hero { padding-block: 32px; } }
     </style>
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
   </head>
-
-  <body>
-    <h2>
-      <a href="https://github.com/hongyime/sgSchools2020">sgSchools2020</a>
-    </h2>
-    <h4>
-      PRIMARY SCHOOLS<br />
-      <a href="https://www.admiraltypri.moe.edu.sg"
-        >https://www.admiraltypri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ahmadibrahimpri.moe.edu.sg"
-        >https://www.ahmadibrahimpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.aitong.moe.edu.sg">https://www.aitong.moe.edu.sg</a
-      ><br />
-      <a href="https://www.alexandrapri.moe.edu.sg"
-        >https://www.alexandrapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.anchorgreenpri.moe.edu.sg"
-        >https://www.anchorgreenpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.andersonpri.moe.edu.sg"
-        >https://www.andersonpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.acsj.moe.edu.sg">https://www.acsj.moe.edu.sg</a
-      ><br />
-      <a href="https://www.acspri.moe.edu.sg">https://www.acspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.angsanapri.moe.edu.sg"
-        >https://www.angsanapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.angmokiopri.moe.edu.sg"
-        >https://www.angmokiopri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.beaconpri.moe.edu.sg"
-        >https://www.beaconpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bedokgreenpri.moe.edu.sg"
-        >https://www.bedokgreenpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bendemeerpri.moe.edu.sg"
-        >https://www.bendemeerpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.blangahrisepri.moe.edu.sg"
-        >https://www.blangahrisepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bukitpanjangpri.moe.edu.sg"
-        >https://www.bukitpanjangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bukittimahpri.moe.edu.sg"
-        >https://www.bukittimahpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bukitviewpri.moe.edu.sg"
-        >https://www.bukitviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.canberrapri.moe.edu.sg"
-        >https://www.canberrapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.cantonmentpri.moe.edu.sg"
-        >https://www.cantonmentpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.casuarinapri.moe.edu.sg"
-        >https://www.casuarinapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.catholichigh.moe.edu.sg"
-        >https://www.catholichigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.cedarpri.moe.edu.sg"
-        >https://www.cedarpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.changkatpri.moe.edu.sg"
-        >https://www.changkatpri.moe.edu.sg</a
-      ><br />
-      <a href="https://chijkcp.moe.edu.sg">https://chijkcp.moe.edu.sg</a><br />
-      <a href="https://www.chijkellock.moe.edu.sg"
-        >https://www.chijkellock.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijourladyofgoodcounsel.moe.edu.sg"
-        >https://www.chijourladyofgoodcounsel.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijourladyofthenativity.moe.edu.sg"
-        >https://www.chijourladyofthenativity.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijourladyqueenofpeace.moe.edu.sg"
-        >https://www.chijourladyqueenofpeace.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijpritoapayoh.moe.edu.sg"
-        >https://www.chijpritoapayoh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijstnicholasgirls.moe.edu.sg"
-        >https://www.chijstnicholasgirls.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chongfu.moe.edu.sg">https://www.chongfu.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chongzhengpri.moe.edu.sg"
-        >https://www.chongzhengpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chuachukangpri.moe.edu.sg"
-        >https://www.chuachukangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.clementipri.moe.edu.sg"
-        >https://www.clementipri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.compassvalepri.moe.edu.sg"
-        >https://www.compassvalepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.concordpri.moe.edu.sg"
-        >https://www.concordpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.corporationpri.moe.edu.sg"
-        >https://www.corporationpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.damaipri.moe.edu.sg"
-        >https://www.damaipri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.dazhongpri.moe.edu.sg"
-        >https://www.dazhongpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.delasalle.moe.edu.sg"
-        >https://www.delasalle.moe.edu.sg</a
-      ><br />
-      <a href="https://www.edgefieldpri.moe.edu.sg"
-        >https://www.edgefieldpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.endeavourpri.moe.edu.sg"
-        >https://www.endeavourpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.eunospri.moe.edu.sg"
-        >https://www.eunospri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.evergreenpri.moe.edu.sg"
-        >https://www.evergreenpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fmsp.moe.edu.sg">https://www.fmsp.moe.edu.sg</a
-      ><br />
-      <a href="https://www.farrerparkpri.moe.edu.sg"
-        >https://www.farrerparkpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.firsttoapayohpri.moe.edu.sg"
-        >https://www.firsttoapayohpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.frontierpri.moe.edu.sg"
-        >https://www.frontierpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fuchunpri.moe.edu.sg"
-        >https://www.fuchunpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fuhuapri.moe.edu.sg"
-        >https://www.fuhuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ganengsengpri.moe.edu.sg"
-        >https://www.ganengsengpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.geylangmethodistpri.moe.edu.sg"
-        >https://www.geylangmethodistpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.gongshangpri.moe.edu.sg"
-        >https://www.gongshangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.greendalepri.moe.edu.sg"
-        >https://www.greendalepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.greenridgepri.moe.edu.sg"
-        >https://www.greenridgepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.greenwoodpri.moe.edu.sg"
-        >https://www.greenwoodpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.guangyangpri.moe.edu.sg"
-        >https://www.guangyangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.haiggirls.moe.edu.sg"
-        >https://www.haiggirls.moe.edu.sg</a
-      ><br />
-      <a href="https://www.holyinnocentspri.moe.edu.sg"
-        >https://www.holyinnocentspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.henryparkpri.moe.edu.sg"
-        >https://www.henryparkpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.hongwen.moe.edu.sg">https://www.hongwen.moe.edu.sg</a
-      ><br />
-      <a href="https://www.horizonpri.moe.edu.sg"
-        >https://www.horizonpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.hougangpri.moe.edu.sg"
-        >https://www.hougangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.huaminpri.moe.edu.sg"
-        >https://www.huaminpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.innovapri.moe.edu.sg"
-        >https://www.innovapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jieminpri.moe.edu.sg"
-        >https://www.jieminpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jingshanpri.moe.edu.sg"
-        >https://www.jingshanpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jurongpri.moe.edu.sg"
-        >https://www.jurongpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jurongwestpri.moe.edu.sg"
-        >https://www.jurongwestpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.juyingpri.moe.edu.sg"
-        >https://www.juyingpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.kemingpri.moe.edu.sg"
-        >https://www.kemingpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.khengcheng.moe.edu.sg"
-        >https://www.khengcheng.moe.edu.sg</a
-      ><br />
-      <a href="https://www.konghwa.moe.edu.sg">https://www.konghwa.moe.edu.sg</a
-      ><br />
-      <a href="https://kranjipri.moe.edu.sg">https://kranjipri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.kuochuanpresbyterianpri.moe.edu.sg"
-        >https://www.kuochuanpresbyterianpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.lakesidepri.moe.edu.sg"
-        >https://www.lakesidepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.lianhuapri.moe.edu.sg"
-        >https://www.lianhuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.mahabodhi.moe.edu.sg"
-        >https://www.mahabodhi.moe.edu.sg</a
-      ><br />
-      <a href="https://www.marisstellahigh.moe.edu.sg"
-        >https://www.marisstellahigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.marsilingpri.moe.edu.sg"
-        >https://www.marsilingpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.marymountconvent.moe.edu.sg"
-        >https://www.marymountconvent.moe.edu.sg</a
-      ><br />
-      <a href="https://www.mayflowerpri.moe.edu.sg"
-        >https://www.mayflowerpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.meetoh.moe.edu.sg">https://www.meetoh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.meridianpri.moe.edu.sg"
-        >https://www.meridianpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.montfortjunior.moe.edu.sg"
-        >https://www.montfortjunior.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ncps.moe.edu.sg">https://www.ncps.moe.edu.sg</a
-      ><br />
-      <a href="https://www.nanhuapri.moe.edu.sg"
-        >https://www.nanhuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.nyps.moe.edu.sg">https://www.nyps.moe.edu.sg</a
-      ><br />
-      <a href="https://www.navalbasepri.moe.edu.sg"
-        >https://www.navalbasepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.newtownpri.moe.edu.sg"
-        >https://www.newtownpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northlandpri.moe.edu.sg"
-        >https://www.northlandpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northoakspri.moe.edu.sg"
-        >https://www.northoakspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northspringpri.moe.edu.sg"
-        >https://www.northspringpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northviewpri.moe.edu.sg"
-        >https://www.northviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.oasispri.moe.edu.sg"
-        >https://www.oasispri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.palmviewpri.moe.edu.sg"
-        >https://www.palmviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.parkviewpri.moe.edu.sg"
-        >https://www.parkviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.pasirrispri.moe.edu.sg"
-        >https://www.pasirrispri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.payalebarmethodistgirlspri.moe.edu.sg"
-        >https://www.payalebarmethodistgirlspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peichunpublic.moe.edu.sg"
-        >https://www.peichunpublic.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peihwapresbyterianpri.moe.edu.sg"
-        >https://www.peihwapresbyterianpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peitongpri.moe.edu.sg"
-        >https://www.peitongpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peiyingpri.moe.edu.sg"
-        >https://www.peiyingpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.pioneerpri.moe.edu.sg"
-        >https://www.pioneerpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.poiching.moe.edu.sgsap"
-        >https://www.poiching.moe.edu.sgsap</a
-      ><br />
-      <a href="https://www.princesselizabethpri.moe.edu.sg"
-        >https://www.princesselizabethpri.moe.edu.sg</a
-      ><br />
-      <a href="https://punggolcovepri.moe.edu.sg"
-        >https://punggolcovepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.punggolgreenpri.moe.edu.sg"
-        >https://www.punggolgreenpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.punggolpri.moe.edu.sg"
-        >https://www.punggolpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.punggolviewpri.moe.edu.sg"
-        >https://www.punggolviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.qifapri.moe.edu.sg">https://www.qifapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.qihuapri.moe.edu.sg"
-        >https://www.qihuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.queenstownpri.moe.edu.sg"
-        >https://www.queenstownpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.radinmaspri.moe.edu.sg"
-        >https://www.radinmaspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rgps.moe.edu.sg">https://www.rgps.moe.edu.sg</a
-      ><br />
-      <a href="https://www.redswastika.moe.edu.sg"
-        >https://www.redswastika.moe.edu.sg</a
-      ><br />
-      <a href="https://www.riversidepri.moe.edu.sg"
-        >https://www.riversidepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rivervalleypri.moe.edu.sg"
-        >https://www.rivervalleypri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rivervalepri.moe.edu.sg"
-        >https://www.rivervalepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rosyth.moe.edu.sg">https://www.rosyth.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rulangpri.moe.edu.sg"
-        >https://www.rulangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sembawangpri.moe.edu.sg"
-        >https://www.sembawangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sengkanggreenpri.moe.edu.sg"
-        >https://www.sengkanggreenpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sengkangpri.moe.edu.sg"
-        >https://www.sengkangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.silingpri.moe.edu.sg"
-        >https://www.silingpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.scgs.edu.sg">https://www.scgs.edu.sg</a><br />
-      <a href="https://www.southviewpri.moe.edu.sg"
-        >https://www.southviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.springdalepri.moe.edu.sg"
-        >https://www.springdalepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.stamfordpri.moe.edu.sg"
-        >https://www.stamfordpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.saintandrewsjunior.moe.edu.sg"
-        >https://www.saintandrewsjunior.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sacps.edu.sg">https://www.sacps.edu.sg</a><br />
-      <a href="https://www.anthonian.edu.sg">https://www.anthonian.edu.sg</a
-      ><br />
-      <a href="https://www.stgabrielspri.moe.edu.sg"
-        >https://www.stgabrielspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.shps.moe.edu.sg">https://www.shps.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sjijunior.edu.sg">https://www.sjijunior.edu.sg</a
-      ><br />
-      <a href="https://www.stmargaretspri.moe.edu.sg"
-        >https://www.stmargaretspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ststephens.moe.edu.sg"
-        >https://www.ststephens.moe.edu.sg</a
-      ><br />
-      <a href="https://www.tampinespri.moe.edu.sg"
-        >https://www.tampinespri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.tanjongkatongpri.moe.edu.sg"
-        >https://www.tanjongkatongpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.taonan.moe.edu.sg">https://www.taonan.moe.edu.sg</a
-      ><br />
-      <a href="https://www.teckgheepri.moe.edu.sg"
-        >https://www.teckgheepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.teckwhyepri.moe.edu.sg"
-        >https://www.teckwhyepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.telokkuraupri.moe.edu.sg"
-        >https://www.telokkuraupri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.temasekpri.moe.edu.sg"
-        >https://www.temasekpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.townsvillepri.moe.edu.sg"
-        >https://www.townsvillepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.unitypri.moe.edu.sg"
-        >https://www.unitypri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.waterwaypri.moe.edu.sg"
-        >https://www.waterwaypri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.wellingtonpri.moe.edu.sg"
-        >https://www.wellingtonpri.moe.edu.sg</a
-      ><br />
-      <a href="https://westgrovepri.moe.edu.sg"
-        >https://westgrovepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.westspringpri.moe.edu.sg"
-        >https://www.westspringpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.westwoodpri.moe.edu.sg"
-        >https://www.westwoodpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.westviewpri.moe.edu.sg"
-        >https://www.westviewpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.whitesandspri.moe.edu.sg"
-        >https://www.whitesandspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.woodgrovepri.moe.edu.sg"
-        >https://www.woodgrovepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.woodlandspri.moe.edu.sg"
-        >https://www.woodlandspri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.woodlandsringpri.moe.edu.sg"
-        >https://www.woodlandsringpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.xinghuapri.moe.edu.sg"
-        >https://www.xinghuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.xingnanpri.moe.edu.sg"
-        >https://www.xingnanpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.xinminpri.moe.edu.sg"
-        >https://www.xinminpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.xishanpri.moe.edu.sg"
-        >https://www.xishanpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yangzhengpri.moe.edu.sg"
-        >https://www.yangzhengpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yewteepri.moe.edu.sg"
-        >https://www.yewteepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yiochukangpri.moe.edu.sg"
-        >https://www.yiochukangpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yishunpri.moe.edu.sg"
-        >https://www.yishunpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yunengpri.moe.edu.sg"
-        >https://www.yunengpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yuhuapri.moe.edu.sg"
-        >https://www.yuhuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yuminpri.moe.edu.sg"
-        >https://www.yuminpri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.zhangdepri.moe.edu.sg"
-        >https://www.zhangdepri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.zhenghuapri.moe.edu.sg"
-        >https://www.zhenghuapri.moe.edu.sg</a
-      ><br />
-      <a href="https://www.zhonghuapri.moe.edu.sg"
-        >https://www.zhonghuapri.moe.edu.sg</a
-      ><br />
-      <br />
-      SECONDARY SCHOOLS<br />
-      <a href="https://www.admiraltysec.moe.edu.sg"
-        >https://www.admiraltysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ahmadibrahimsec.moe.edu.sg"
-        >https://www.ahmadibrahimsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.andersonsec.moe.edu.sg"
-        >https://www.andersonsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.anglicanhigh.moe.edu.sg"
-        >https://www.anglicanhigh.moe.edu.sg</a
-      ><br />
-      <a href="https://acsbr.moe.edu.sg">https://acsbr.moe.edu.sg</a><br />
-      <a href="https://www.angmokiosec.moe.edu.sg"
-        >https://www.angmokiosec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.assumptionenglish.moe.edu.sg"
-        >https://www.assumptionenglish.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bartleysec.moe.edu.sg"
-        >https://www.bartleysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.beattysec.moe.edu.sg"
-        >https://www.beattysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bedokgreensec.moe.edu.sg"
-        >https://www.bedokgreensec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bedoksouthsec.moe.edu.sg"
-        >https://www.bedoksouthsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bedokviewsec.moe.edu.sg"
-        >https://www.bedokviewsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.boonlaysec.moe.edu.sg"
-        >https://www.boonlaysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bowensec.moe.edu.sg"
-        >https://www.bowensec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.broadricksec.moe.edu.sg"
-        >https://www.broadricksec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bukitbatoksec.moe.edu.sg"
-        >https://www.bukitbatoksec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bukitmerahsec.moe.edu.sg"
-        >https://www.bukitmerahsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bpghs.moe.edu.sg">https://www.bpghs.moe.edu.sg</a
-      ><br />
-      <a href="https://www.bukitviewsec.moe.edu.sg"
-        >https://www.bukitviewsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.canberrasec.moe.edu.sg"
-        >https://www.canberrasec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.cedargirlssec.moe.edu.sg"
-        >https://www.cedargirlssec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.changkatchangisec.moe.edu.sg"
-        >https://www.changkatchangisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijkatongconvent.moe.edu.sg"
-        >https://www.chijkatongconvent.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijsec.edu.sg">https://www.chijsec.edu.sg</a><br />
-      <a href="https://www.chijstjosephsconvent.moe.edu.sg"
-        >https://www.chijstjosephsconvent.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijstnicholasgirls.moe.edu.sg"
-        >https://www.chijstnicholasgirls.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chijsttheresasconvent.moe.edu.sg"
-        >https://www.chijsttheresasconvent.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chuachukangsec.moe.edu.sg"
-        >https://www.chuachukangsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.christchurchsec.moe.edu.sg"
-        >https://www.christchurchsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chungchenghighmain.moe.edu.sg"
-        >https://www.chungchenghighmain.moe.edu.sg</a
-      ><br />
-      <a href="https://www.chungchenghighyishun.moe.edu.sg"
-        >https://www.chungchenghighyishun.moe.edu.sg</a
-      ><br />
-      <a href="https://www.clementitownsec.moe.edu.sg"
-        >https://www.clementitownsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.commonwealthsec.moe.edu.sg"
-        >https://www.commonwealthsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.compassvalesec.moe.edu.sg"
-        >https://www.compassvalesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.crescent.edu.sg">https://www.crescent.edu.sg</a
-      ><br />
-      <a href="https://www.damaisec.moe.edu.sg"
-        >https://www.damaisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.deyisec.moe.edu.sg">https://www.deyisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.dunearnsec.moe.edu.sg"
-        >https://www.dunearnsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.dunmanhigh.moe.edu.sg"
-        >https://www.dunmanhigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.dunmansec.moe.edu.sg"
-        >https://www.dunmansec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.eastspringsec.moe.edu.sg"
-        >https://www.eastspringsec.moe.edu.sg</a
-      ><br />
-      <a href="https://edgefield.sg">https://edgefield.sg</a><br />
-      <a href="https://www.evergreensec.moe.edu.sg"
-        >https://www.evergreensec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fairfieldmethodistsec.moe.edu.sg"
-        >https://www.fairfieldmethodistsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fajarsec.moe.edu.sg"
-        >https://www.fajarsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fuchunsec.moe.edu.sg"
-        >https://www.fuchunsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.fuhuasec.moe.edu.sg"
-        >https://www.fuhuasec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ganengsengsch.moe.edu.sg"
-        >https://www.ganengsengsch.moe.edu.sg</a
-      ><br />
-      <a href="https://www.geylangmethodistsec.moe.edu.sg"
-        >https://www.geylangmethodistsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.greendalesec.moe.edu.sg"
-        >https://www.greendalesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.greenridgesec.moe.edu.sg"
-        >https://www.greenridgesec.moe.edu.sg</a
-      ><br />
-      <a href="https://guangyangsec.moe.edu.sg"
-        >https://guangyangsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.haisingcatholic.moe.edu.sg"
-        >https://www.haisingcatholic.moe.edu.sg</a
-      ><br />
-      <a href="https://www.hillgrovesec.moe.edu.sg"
-        >https://www.hillgrovesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.holyinnocentshigh.moe.edu.sg"
-        >https://www.holyinnocentshigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.hougangsec.moe.edu.sg"
-        >https://www.hougangsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.huayisec.moe.edu.sg"
-        >https://www.huayisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.hci.edu.sg">https://www.hci.edu.sg</a><br />
-      <a href="https://www.junyuansec.moe.edu.sg"
-        >https://www.junyuansec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jurongsec.moe.edu.sg"
-        >https://www.jurongsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jurongwestsec.moe.edu.sg"
-        >https://www.jurongwestsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.jurongvillesec.moe.edu.sg"
-        >https://www.jurongvillesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.juyingsec.moe.edu.sg"
-        >https://www.juyingsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.kentridgesec.moe.edu.sg"
-        >https://www.kentridgesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.kranjisec.moe.edu.sg"
-        >https://www.kranjisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.loyangviewsec.moe.edu.sg"
-        >https://www.loyangviewsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.manjusrisec.moe.edu.sg"
-        >https://www.manjusrisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.marsilingsec.moe.edu.sgmss"
-        >https://www.marsilingsec.moe.edu.sgmss</a
-      ><br />
-      <a href="https://www.mayflowersec.moe.edu.sg"
-        >https://www.mayflowersec.moe.edu.sg</a
-      ><br />
-      <a href="https://meridiansec.moe.edu.sg">https://meridiansec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.montfortsec.moe.edu.sg"
-        >https://www.montfortsec.moe.edu.sg</a
-      ><br />
-      <a href="https://nchs.edu.sg">https://nchs.edu.sg</a><br />
-      <a href="https://www.nanhuahigh.moe.edu.sg"
-        >https://www.nanhuahigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.nationaljc.moe.edu.sg"
-        >https://www.nationaljc.moe.edu.sg</a
-      ><br />
-      <a href="https://www.navalbasesec.moe.edu.sg"
-        >https://www.navalbasesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.newtownsec.moe.edu.sg"
-        >https://www.newtownsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ngeeannsec.moe.edu.sg"
-        >https://www.ngeeannsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northvistasec.moe.edu.sg"
-        >https://www.northvistasec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northbrookssec.moe.edu.sg"
-        >https://www.northbrookssec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.northlandsec.moe.edu.sg"
-        >https://www.northlandsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.nushigh.edu.sg">https://www.nushigh.edu.sg</a><br />
-      <a href="https://www.orchidparksec.moe.edu.sg"
-        >https://www.orchidparksec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.outramsec.moe.edu.sg"
-        >https://www.outramsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.prcss.moe.edu.sg">https://www.prcss.moe.edu.sg</a
-      ><br />
-      <a href="https://pasirrissec.moe.edu.sg">https://pasirrissec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.plmgss.moe.edu.sg">https://www.plmgss.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peihwasec.moe.edu.sg"
-        >https://www.peihwasec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peicaisec.moe.edu.sg"
-        >https://www.peicaisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.peircesec.moe.edu.sg"
-        >https://www.peircesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.pingyisec.moe.edu.sg"
-        >https://www.pingyisec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.presbyterian.moe.edu.sg"
-        >https://www.presbyterian.moe.edu.sg</a
-      ><br />
-      <a href="https://www.punggolsec.moe.edu.sg"
-        >https://www.punggolsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.queenstownsec.moe.edu.sg"
-        >https://www.queenstownsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.queenswaysec.moe.edu.sg"
-        >https://www.queenswaysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rgs.edu.sg">https://www.rgs.edu.sg</a><br />
-      <a href="https://www.ri.edu.sg">https://www.ri.edu.sg</a><br />
-      <a href="https://www.regentsec.moe.edu.sg"
-        >https://www.regentsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.riversidesec.moe.edu.sg"
-        >https://www.riversidesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.rivervalleyhigh.moe.edu.sg"
-        >https://www.rivervalleyhigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.standrewssec.moe.edu.sg"
-        >https://www.standrewssec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.stpatricks.moe.edu.sg"
-        >https://www.stpatricks.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sst.edu.sg">https://www.sst.edu.sg</a><br />
-      <a href="https://www.sota.edu.sg">https://www.sota.edu.sg</a><br />
-      <a href="https://www.sembawangsec.moe.edu.sg"
-        >https://www.sembawangsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sengkangsec.moe.edu.sg"
-        >https://www.sengkangsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sgs.edu.sg">https://www.sgs.edu.sg</a><br />
-      <a href="https://www.serangoonsec.moe.edu.sg"
-        >https://www.serangoonsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.springfieldsec.moe.edu.sg"
-        >https://www.springfieldsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.stanthonyscanossiansec.moe.edu.sg"
-        >https://www.stanthonyscanossiansec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.stgabrielssec.moe.edu.sg"
-        >https://www.stgabrielssec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sthildassec.moe.edu.sg"
-        >https://www.sthildassec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.stmargaretssec.moe.edu.sg"
-        >https://www.stmargaretssec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sji.edu.sg">https://www.sji.edu.sg</a><br />
-      <a href="https://www.swisscottagesec.moe.edu.sg"
-        >https://www.swisscottagesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.tanglinsec.moe.edu.sg"
-        >https://www.tanglinsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.tampinessec.moe.edu.sg"
-        >https://www.tampinessec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.tkgs.moe.edu.sg">https://www.tkgs.moe.edu.sg</a
-      ><br />
-      <a href="https://www.tanjongkatongsec.moe.edu.sg"
-        >https://www.tanjongkatongsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.teckwhyesec.moe.edu.sg"
-        >https://www.teckwhyesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.temasekjc.moe.edu.sg"
-        >https://www.temasekjc.moe.edu.sg</a
-      ><br />
-      <a href="https://www.temaseksec.moe.edu.sg"
-        >https://www.temaseksec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.unitysec.moe.edu.sg"
-        >https://www.unitysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.westspringsec.moe.edu.sg"
-        >https://www.westspringsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.westwoodsec.moe.edu.sg"
-        >https://www.westwoodsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.whitleysec.moe.edu.sg"
-        >https://www.whitleysec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.woodgrovesec.moe.edu.sg"
-        >https://www.woodgrovesec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.woodlandsringsec.moe.edu.sg"
-        >https://www.woodlandsringsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.woodlandssec.moe.edu.sg"
-        >https://www.woodlandssec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yiochukangsec.moe.edu.sg"
-        >https://www.yiochukangsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yishunsec.moe.edu.sg"
-        >https://www.yishunsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yishuntownsec.moe.edu.sg"
-        >https://www.yishuntownsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yuanchingsec.moe.edu.sg"
-        >https://www.yuanchingsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yuhuasec.moe.edu.sg"
-        >https://www.yuhuasec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yusofishaksec.moe.edu.sg"
-        >https://www.yusofishaksec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yuyingsec.moe.edu.sg"
-        >https://www.yuyingsec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.zhenghuasec.moe.edu.sg"
-        >https://www.zhenghuasec.moe.edu.sg</a
-      ><br />
-      <a href="https://www.zhonghuasec.moe.edu.sg"
-        >https://www.zhonghuasec.moe.edu.sg</a
-      ><br />
-      <a href="https://syas.edu.sg">https://syas.edu.sg</a><br />
-      <a href="https://www.crestsec.edu.sg">https://www.crestsec.edu.sg</a
-      ><br />
-      <a href="https://www.spectra.edu.sg">https://www.spectra.edu.sg</a><br />
-      <br />
-      JUNIOR COLLEGES<br />
-      <a href="https://asrjc.moe.edu.sg">https://asrjc.moe.edu.sg</a><br />
-      <a href="https://acjc.moe.edu.sg">https://acjc.moe.edu.sg</a><br />
-      <a href="https://www.acsindep.moe.edu.sg"
-        >https://www.acsindep.moe.edu.sg</a
-      ><br />
-      <a href="https://cjc.moe.edu.sg">https://cjc.moe.edu.sg</a><br />
-      <a href="https://dunmanhigh.moe.edu.sg">https://dunmanhigh.moe.edu.sg</a
-      ><br />
-      <a href="https://eunoiajc.moe.edu.sg">https://eunoiajc.moe.edu.sg</a
-      ><br />
-      <a href="https://www.hci.edu.sg">https://www.hci.edu.sg</a><br />
-      <a href="https://jpjc.moe.edu.sg">https://jpjc.moe.edu.sg</a><br />
-      <a href="https://www.millenniainstitute.moe.edu.sg"
-        >https://www.millenniainstitute.moe.edu.sg</a
-      ><br />
-      <a href="https://www.nushigh.edu.sg">https://www.nushigh.edu.sg</a><br />
-      <a href="https://nanyangjc.moe.edu.sg">https://nanyangjc.moe.edu.sg</a
-      ><br />
-      <a href="https://nationaljc.moe.edu.sg">https://nationaljc.moe.edu.sg</a
-      ><br />
-      <a href="https://www.ri.edu.sg">https://www.ri.edu.sg</a><br />
-      <a href="https://rivervalleyhigh.moe.edu.sg"
-        >https://rivervalleyhigh.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sota.edu.sg">https://www.sota.edu.sg</a><br />
-      <a href="https://www.sportsschool.edu.sg"
-        >https://www.sportsschool.edu.sg</a
-      ><br />
-      <a href="https://standrewsjc.moe.edu.sg">https://standrewsjc.moe.edu.sg</a
-      ><br />
-      <a href="https://www.sji.edu.sg">https://www.sji.edu.sg</a><br />
-      <a href="https://tmjc.moe.edu.sg">https://tmjc.moe.edu.sg</a><br />
-      <a href="https://temasekjc.moe.edu.sg">https://temasekjc.moe.edu.sg</a
-      ><br />
-      <a href="https://victoriajc.moe.edu.sg">https://victoriajc.moe.edu.sg</a
-      ><br />
-      <a href="https://www.yijc.moe.edu.sg">https://www.yijc.moe.edu.sg</a
-      ><br />
-      <br />
-      POLYTECHNICS<br />
-      <a href="https://www.sp.edu.sg">https://www.sp.edu.sg</a><br />
-      <a href="https://www.np.edu.sg">https://www.np.edu.sg</a><br />
-      <a href="https://www.tp.edu.sg">https://www.tp.edu.sg</a><br />
-      <a href="https://www.rp.edu.sg">https://www.rp.edu.sg</a><br />
-      <a href="https://www.nyp.edu.sg">https://www.nyp.edu.sg</a><br />
-      <br />
-      ITE<br />
-      <a href="https://www.ite.edu.sg">https://www.ite.edu.sg</a><br />
-
-    </h4>
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+  <body id="top">
+    <a class="skip-link" href="#directory">Skip to school directory</a>
+    <header class="masthead">
+      <div class="wrap">
+        <a class="brand" href="https://theprawnprojects.hong-yi.me/">THE PRAWN PROJECTS</a>
+        <span class="archive">ARCHIVE / 2020</span>
+      </div>
+    </header>
+    <div class="hero wrap">
+      <h1>Singapore schools.</h1>
+      <p class="lede">A 2020 collection of Singapore school websites. Some names and addresses may have changed since this list was collected.</p>
+      <p class="meta">338 archived links · 5 education levels</p>
+      <p><a href="https://www.google.com/maps/d/edit?mid=1_mfutjXbEmxyRA4Cj3XH66z1S79MCG29&amp;usp=sharing">Open the original school map</a></p>
+      <nav aria-label="Education levels">
+        <a href="#primary">Primary schools</a>
+        <a href="#secondary">Secondary schools</a>
+        <a href="#junior-colleges">Junior colleges</a>
+        <a href="#polytechnics">Polytechnics</a>
+        <a href="#ite">ITE</a>
+      </nav>
+    </div>
+    <main id="directory" class="wrap" tabindex="-1">
+      <section id="primary" aria-labelledby="primary-heading">
+        <div class="section-heading">
+          <h2 id="primary-heading">Primary schools</h2>
+          <p class="count">170 links</p>
+        </div>
+        <ul class="school-list">
+          <li><a href="https://www.admiraltypri.moe.edu.sg">https://www.admiraltypri.moe.edu.sg</a></li>
+          <li><a href="https://www.ahmadibrahimpri.moe.edu.sg">https://www.ahmadibrahimpri.moe.edu.sg</a></li>
+          <li><a href="https://www.aitong.moe.edu.sg">https://www.aitong.moe.edu.sg</a></li>
+          <li><a href="https://www.alexandrapri.moe.edu.sg">https://www.alexandrapri.moe.edu.sg</a></li>
+          <li><a href="https://www.anchorgreenpri.moe.edu.sg">https://www.anchorgreenpri.moe.edu.sg</a></li>
+          <li><a href="https://www.andersonpri.moe.edu.sg">https://www.andersonpri.moe.edu.sg</a></li>
+          <li><a href="https://www.acsj.moe.edu.sg">https://www.acsj.moe.edu.sg</a></li>
+          <li><a href="https://www.acspri.moe.edu.sg">https://www.acspri.moe.edu.sg</a></li>
+          <li><a href="https://www.angsanapri.moe.edu.sg">https://www.angsanapri.moe.edu.sg</a></li>
+          <li><a href="https://www.angmokiopri.moe.edu.sg">https://www.angmokiopri.moe.edu.sg</a></li>
+          <li><a href="https://www.beaconpri.moe.edu.sg">https://www.beaconpri.moe.edu.sg</a></li>
+          <li><a href="https://www.bedokgreenpri.moe.edu.sg">https://www.bedokgreenpri.moe.edu.sg</a></li>
+          <li><a href="https://www.bendemeerpri.moe.edu.sg">https://www.bendemeerpri.moe.edu.sg</a></li>
+          <li><a href="https://www.blangahrisepri.moe.edu.sg">https://www.blangahrisepri.moe.edu.sg</a></li>
+          <li><a href="https://www.bukitpanjangpri.moe.edu.sg">https://www.bukitpanjangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.bukittimahpri.moe.edu.sg">https://www.bukittimahpri.moe.edu.sg</a></li>
+          <li><a href="https://www.bukitviewpri.moe.edu.sg">https://www.bukitviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.canberrapri.moe.edu.sg">https://www.canberrapri.moe.edu.sg</a></li>
+          <li><a href="https://www.cantonmentpri.moe.edu.sg">https://www.cantonmentpri.moe.edu.sg</a></li>
+          <li><a href="https://www.casuarinapri.moe.edu.sg">https://www.casuarinapri.moe.edu.sg</a></li>
+          <li><a href="https://www.catholichigh.moe.edu.sg">https://www.catholichigh.moe.edu.sg</a></li>
+          <li><a href="https://www.cedarpri.moe.edu.sg">https://www.cedarpri.moe.edu.sg</a></li>
+          <li><a href="https://www.changkatpri.moe.edu.sg">https://www.changkatpri.moe.edu.sg</a></li>
+          <li><a href="https://chijkcp.moe.edu.sg">https://chijkcp.moe.edu.sg</a></li>
+          <li><a href="https://www.chijkellock.moe.edu.sg">https://www.chijkellock.moe.edu.sg</a></li>
+          <li><a href="https://www.chijourladyofgoodcounsel.moe.edu.sg">https://www.chijourladyofgoodcounsel.moe.edu.sg</a></li>
+          <li><a href="https://www.chijourladyofthenativity.moe.edu.sg">https://www.chijourladyofthenativity.moe.edu.sg</a></li>
+          <li><a href="https://www.chijourladyqueenofpeace.moe.edu.sg">https://www.chijourladyqueenofpeace.moe.edu.sg</a></li>
+          <li><a href="https://www.chijpritoapayoh.moe.edu.sg">https://www.chijpritoapayoh.moe.edu.sg</a></li>
+          <li><a href="https://www.chijstnicholasgirls.moe.edu.sg">https://www.chijstnicholasgirls.moe.edu.sg</a></li>
+          <li><a href="https://www.chongfu.moe.edu.sg">https://www.chongfu.moe.edu.sg</a></li>
+          <li><a href="https://www.chongzhengpri.moe.edu.sg">https://www.chongzhengpri.moe.edu.sg</a></li>
+          <li><a href="https://www.chuachukangpri.moe.edu.sg">https://www.chuachukangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.clementipri.moe.edu.sg">https://www.clementipri.moe.edu.sg</a></li>
+          <li><a href="https://www.compassvalepri.moe.edu.sg">https://www.compassvalepri.moe.edu.sg</a></li>
+          <li><a href="https://www.concordpri.moe.edu.sg">https://www.concordpri.moe.edu.sg</a></li>
+          <li><a href="https://www.corporationpri.moe.edu.sg">https://www.corporationpri.moe.edu.sg</a></li>
+          <li><a href="https://www.damaipri.moe.edu.sg">https://www.damaipri.moe.edu.sg</a></li>
+          <li><a href="https://www.dazhongpri.moe.edu.sg">https://www.dazhongpri.moe.edu.sg</a></li>
+          <li><a href="https://www.delasalle.moe.edu.sg">https://www.delasalle.moe.edu.sg</a></li>
+          <li><a href="https://www.edgefieldpri.moe.edu.sg">https://www.edgefieldpri.moe.edu.sg</a></li>
+          <li><a href="https://www.endeavourpri.moe.edu.sg">https://www.endeavourpri.moe.edu.sg</a></li>
+          <li><a href="https://www.eunospri.moe.edu.sg">https://www.eunospri.moe.edu.sg</a></li>
+          <li><a href="https://www.evergreenpri.moe.edu.sg">https://www.evergreenpri.moe.edu.sg</a></li>
+          <li><a href="https://www.fmsp.moe.edu.sg">https://www.fmsp.moe.edu.sg</a></li>
+          <li><a href="https://www.farrerparkpri.moe.edu.sg">https://www.farrerparkpri.moe.edu.sg</a></li>
+          <li><a href="https://www.firsttoapayohpri.moe.edu.sg">https://www.firsttoapayohpri.moe.edu.sg</a></li>
+          <li><a href="https://www.frontierpri.moe.edu.sg">https://www.frontierpri.moe.edu.sg</a></li>
+          <li><a href="https://www.fuchunpri.moe.edu.sg">https://www.fuchunpri.moe.edu.sg</a></li>
+          <li><a href="https://www.fuhuapri.moe.edu.sg">https://www.fuhuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.ganengsengpri.moe.edu.sg">https://www.ganengsengpri.moe.edu.sg</a></li>
+          <li><a href="https://www.geylangmethodistpri.moe.edu.sg">https://www.geylangmethodistpri.moe.edu.sg</a></li>
+          <li><a href="https://www.gongshangpri.moe.edu.sg">https://www.gongshangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.greendalepri.moe.edu.sg">https://www.greendalepri.moe.edu.sg</a></li>
+          <li><a href="https://www.greenridgepri.moe.edu.sg">https://www.greenridgepri.moe.edu.sg</a></li>
+          <li><a href="https://www.greenwoodpri.moe.edu.sg">https://www.greenwoodpri.moe.edu.sg</a></li>
+          <li><a href="https://www.guangyangpri.moe.edu.sg">https://www.guangyangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.haiggirls.moe.edu.sg">https://www.haiggirls.moe.edu.sg</a></li>
+          <li><a href="https://www.holyinnocentspri.moe.edu.sg">https://www.holyinnocentspri.moe.edu.sg</a></li>
+          <li><a href="https://www.henryparkpri.moe.edu.sg">https://www.henryparkpri.moe.edu.sg</a></li>
+          <li><a href="https://www.hongwen.moe.edu.sg">https://www.hongwen.moe.edu.sg</a></li>
+          <li><a href="https://www.horizonpri.moe.edu.sg">https://www.horizonpri.moe.edu.sg</a></li>
+          <li><a href="https://www.hougangpri.moe.edu.sg">https://www.hougangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.huaminpri.moe.edu.sg">https://www.huaminpri.moe.edu.sg</a></li>
+          <li><a href="https://www.innovapri.moe.edu.sg">https://www.innovapri.moe.edu.sg</a></li>
+          <li><a href="https://www.jieminpri.moe.edu.sg">https://www.jieminpri.moe.edu.sg</a></li>
+          <li><a href="https://www.jingshanpri.moe.edu.sg">https://www.jingshanpri.moe.edu.sg</a></li>
+          <li><a href="https://www.jurongpri.moe.edu.sg">https://www.jurongpri.moe.edu.sg</a></li>
+          <li><a href="https://www.jurongwestpri.moe.edu.sg">https://www.jurongwestpri.moe.edu.sg</a></li>
+          <li><a href="https://www.juyingpri.moe.edu.sg">https://www.juyingpri.moe.edu.sg</a></li>
+          <li><a href="https://www.kemingpri.moe.edu.sg">https://www.kemingpri.moe.edu.sg</a></li>
+          <li><a href="https://www.khengcheng.moe.edu.sg">https://www.khengcheng.moe.edu.sg</a></li>
+          <li><a href="https://www.konghwa.moe.edu.sg">https://www.konghwa.moe.edu.sg</a></li>
+          <li><a href="https://kranjipri.moe.edu.sg">https://kranjipri.moe.edu.sg</a></li>
+          <li><a href="https://www.kuochuanpresbyterianpri.moe.edu.sg">https://www.kuochuanpresbyterianpri.moe.edu.sg</a></li>
+          <li><a href="https://www.lakesidepri.moe.edu.sg">https://www.lakesidepri.moe.edu.sg</a></li>
+          <li><a href="https://www.lianhuapri.moe.edu.sg">https://www.lianhuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.mahabodhi.moe.edu.sg">https://www.mahabodhi.moe.edu.sg</a></li>
+          <li><a href="https://www.marisstellahigh.moe.edu.sg">https://www.marisstellahigh.moe.edu.sg</a></li>
+          <li><a href="https://www.marsilingpri.moe.edu.sg">https://www.marsilingpri.moe.edu.sg</a></li>
+          <li><a href="https://www.marymountconvent.moe.edu.sg">https://www.marymountconvent.moe.edu.sg</a></li>
+          <li><a href="https://www.mayflowerpri.moe.edu.sg">https://www.mayflowerpri.moe.edu.sg</a></li>
+          <li><a href="https://www.meetoh.moe.edu.sg">https://www.meetoh.moe.edu.sg</a></li>
+          <li><a href="https://www.meridianpri.moe.edu.sg">https://www.meridianpri.moe.edu.sg</a></li>
+          <li><a href="https://www.montfortjunior.moe.edu.sg">https://www.montfortjunior.moe.edu.sg</a></li>
+          <li><a href="https://www.ncps.moe.edu.sg">https://www.ncps.moe.edu.sg</a></li>
+          <li><a href="https://www.nanhuapri.moe.edu.sg">https://www.nanhuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.nyps.moe.edu.sg">https://www.nyps.moe.edu.sg</a></li>
+          <li><a href="https://www.navalbasepri.moe.edu.sg">https://www.navalbasepri.moe.edu.sg</a></li>
+          <li><a href="https://www.newtownpri.moe.edu.sg">https://www.newtownpri.moe.edu.sg</a></li>
+          <li><a href="https://www.northlandpri.moe.edu.sg">https://www.northlandpri.moe.edu.sg</a></li>
+          <li><a href="https://www.northoakspri.moe.edu.sg">https://www.northoakspri.moe.edu.sg</a></li>
+          <li><a href="https://www.northspringpri.moe.edu.sg">https://www.northspringpri.moe.edu.sg</a></li>
+          <li><a href="https://www.northviewpri.moe.edu.sg">https://www.northviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.oasispri.moe.edu.sg">https://www.oasispri.moe.edu.sg</a></li>
+          <li><a href="https://www.palmviewpri.moe.edu.sg">https://www.palmviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.parkviewpri.moe.edu.sg">https://www.parkviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.pasirrispri.moe.edu.sg">https://www.pasirrispri.moe.edu.sg</a></li>
+          <li><a href="https://www.payalebarmethodistgirlspri.moe.edu.sg">https://www.payalebarmethodistgirlspri.moe.edu.sg</a></li>
+          <li><a href="https://www.peichunpublic.moe.edu.sg">https://www.peichunpublic.moe.edu.sg</a></li>
+          <li><a href="https://www.peihwapresbyterianpri.moe.edu.sg">https://www.peihwapresbyterianpri.moe.edu.sg</a></li>
+          <li><a href="https://www.peitongpri.moe.edu.sg">https://www.peitongpri.moe.edu.sg</a></li>
+          <li><a href="https://www.peiyingpri.moe.edu.sg">https://www.peiyingpri.moe.edu.sg</a></li>
+          <li><a href="https://www.pioneerpri.moe.edu.sg">https://www.pioneerpri.moe.edu.sg</a></li>
+          <li><a href="https://www.poiching.moe.edu.sgsap">https://www.poiching.moe.edu.sgsap</a></li>
+          <li><a href="https://www.princesselizabethpri.moe.edu.sg">https://www.princesselizabethpri.moe.edu.sg</a></li>
+          <li><a href="https://punggolcovepri.moe.edu.sg">https://punggolcovepri.moe.edu.sg</a></li>
+          <li><a href="https://www.punggolgreenpri.moe.edu.sg">https://www.punggolgreenpri.moe.edu.sg</a></li>
+          <li><a href="https://www.punggolpri.moe.edu.sg">https://www.punggolpri.moe.edu.sg</a></li>
+          <li><a href="https://www.punggolviewpri.moe.edu.sg">https://www.punggolviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.qifapri.moe.edu.sg">https://www.qifapri.moe.edu.sg</a></li>
+          <li><a href="https://www.qihuapri.moe.edu.sg">https://www.qihuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.queenstownpri.moe.edu.sg">https://www.queenstownpri.moe.edu.sg</a></li>
+          <li><a href="https://www.radinmaspri.moe.edu.sg">https://www.radinmaspri.moe.edu.sg</a></li>
+          <li><a href="https://www.rgps.moe.edu.sg">https://www.rgps.moe.edu.sg</a></li>
+          <li><a href="https://www.redswastika.moe.edu.sg">https://www.redswastika.moe.edu.sg</a></li>
+          <li><a href="https://www.riversidepri.moe.edu.sg">https://www.riversidepri.moe.edu.sg</a></li>
+          <li><a href="https://www.rivervalleypri.moe.edu.sg">https://www.rivervalleypri.moe.edu.sg</a></li>
+          <li><a href="https://www.rivervalepri.moe.edu.sg">https://www.rivervalepri.moe.edu.sg</a></li>
+          <li><a href="https://www.rosyth.moe.edu.sg">https://www.rosyth.moe.edu.sg</a></li>
+          <li><a href="https://www.rulangpri.moe.edu.sg">https://www.rulangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.sembawangpri.moe.edu.sg">https://www.sembawangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.sengkanggreenpri.moe.edu.sg">https://www.sengkanggreenpri.moe.edu.sg</a></li>
+          <li><a href="https://www.sengkangpri.moe.edu.sg">https://www.sengkangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.silingpri.moe.edu.sg">https://www.silingpri.moe.edu.sg</a></li>
+          <li><a href="https://www.scgs.edu.sg">https://www.scgs.edu.sg</a></li>
+          <li><a href="https://www.southviewpri.moe.edu.sg">https://www.southviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.springdalepri.moe.edu.sg">https://www.springdalepri.moe.edu.sg</a></li>
+          <li><a href="https://www.stamfordpri.moe.edu.sg">https://www.stamfordpri.moe.edu.sg</a></li>
+          <li><a href="https://www.saintandrewsjunior.moe.edu.sg">https://www.saintandrewsjunior.moe.edu.sg</a></li>
+          <li><a href="https://www.sacps.edu.sg">https://www.sacps.edu.sg</a></li>
+          <li><a href="https://www.anthonian.edu.sg">https://www.anthonian.edu.sg</a></li>
+          <li><a href="https://www.stgabrielspri.moe.edu.sg">https://www.stgabrielspri.moe.edu.sg</a></li>
+          <li><a href="https://www.shps.moe.edu.sg">https://www.shps.moe.edu.sg</a></li>
+          <li><a href="https://www.sjijunior.edu.sg">https://www.sjijunior.edu.sg</a></li>
+          <li><a href="https://www.stmargaretspri.moe.edu.sg">https://www.stmargaretspri.moe.edu.sg</a></li>
+          <li><a href="https://www.ststephens.moe.edu.sg">https://www.ststephens.moe.edu.sg</a></li>
+          <li><a href="https://www.tampinespri.moe.edu.sg">https://www.tampinespri.moe.edu.sg</a></li>
+          <li><a href="https://www.tanjongkatongpri.moe.edu.sg">https://www.tanjongkatongpri.moe.edu.sg</a></li>
+          <li><a href="https://www.taonan.moe.edu.sg">https://www.taonan.moe.edu.sg</a></li>
+          <li><a href="https://www.teckgheepri.moe.edu.sg">https://www.teckgheepri.moe.edu.sg</a></li>
+          <li><a href="https://www.teckwhyepri.moe.edu.sg">https://www.teckwhyepri.moe.edu.sg</a></li>
+          <li><a href="https://www.telokkuraupri.moe.edu.sg">https://www.telokkuraupri.moe.edu.sg</a></li>
+          <li><a href="https://www.temasekpri.moe.edu.sg">https://www.temasekpri.moe.edu.sg</a></li>
+          <li><a href="https://www.townsvillepri.moe.edu.sg">https://www.townsvillepri.moe.edu.sg</a></li>
+          <li><a href="https://www.unitypri.moe.edu.sg">https://www.unitypri.moe.edu.sg</a></li>
+          <li><a href="https://www.waterwaypri.moe.edu.sg">https://www.waterwaypri.moe.edu.sg</a></li>
+          <li><a href="https://www.wellingtonpri.moe.edu.sg">https://www.wellingtonpri.moe.edu.sg</a></li>
+          <li><a href="https://westgrovepri.moe.edu.sg">https://westgrovepri.moe.edu.sg</a></li>
+          <li><a href="https://www.westspringpri.moe.edu.sg">https://www.westspringpri.moe.edu.sg</a></li>
+          <li><a href="https://www.westwoodpri.moe.edu.sg">https://www.westwoodpri.moe.edu.sg</a></li>
+          <li><a href="https://www.westviewpri.moe.edu.sg">https://www.westviewpri.moe.edu.sg</a></li>
+          <li><a href="https://www.whitesandspri.moe.edu.sg">https://www.whitesandspri.moe.edu.sg</a></li>
+          <li><a href="https://www.woodgrovepri.moe.edu.sg">https://www.woodgrovepri.moe.edu.sg</a></li>
+          <li><a href="https://www.woodlandspri.moe.edu.sg">https://www.woodlandspri.moe.edu.sg</a></li>
+          <li><a href="https://www.woodlandsringpri.moe.edu.sg">https://www.woodlandsringpri.moe.edu.sg</a></li>
+          <li><a href="https://www.xinghuapri.moe.edu.sg">https://www.xinghuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.xingnanpri.moe.edu.sg">https://www.xingnanpri.moe.edu.sg</a></li>
+          <li><a href="https://www.xinminpri.moe.edu.sg">https://www.xinminpri.moe.edu.sg</a></li>
+          <li><a href="https://www.xishanpri.moe.edu.sg">https://www.xishanpri.moe.edu.sg</a></li>
+          <li><a href="https://www.yangzhengpri.moe.edu.sg">https://www.yangzhengpri.moe.edu.sg</a></li>
+          <li><a href="https://www.yewteepri.moe.edu.sg">https://www.yewteepri.moe.edu.sg</a></li>
+          <li><a href="https://www.yiochukangpri.moe.edu.sg">https://www.yiochukangpri.moe.edu.sg</a></li>
+          <li><a href="https://www.yishunpri.moe.edu.sg">https://www.yishunpri.moe.edu.sg</a></li>
+          <li><a href="https://www.yunengpri.moe.edu.sg">https://www.yunengpri.moe.edu.sg</a></li>
+          <li><a href="https://www.yuhuapri.moe.edu.sg">https://www.yuhuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.yuminpri.moe.edu.sg">https://www.yuminpri.moe.edu.sg</a></li>
+          <li><a href="https://www.zhangdepri.moe.edu.sg">https://www.zhangdepri.moe.edu.sg</a></li>
+          <li><a href="https://www.zhenghuapri.moe.edu.sg">https://www.zhenghuapri.moe.edu.sg</a></li>
+          <li><a href="https://www.zhonghuapri.moe.edu.sg">https://www.zhonghuapri.moe.edu.sg</a></li>
+        </ul>
+        <a class="back" href="#top">Back to top</a>
+      </section>
+      <section id="secondary" aria-labelledby="secondary-heading">
+        <div class="section-heading">
+          <h2 id="secondary-heading">Secondary schools</h2>
+          <p class="count">140 links</p>
+        </div>
+        <ul class="school-list">
+          <li><a href="https://www.admiraltysec.moe.edu.sg">https://www.admiraltysec.moe.edu.sg</a></li>
+          <li><a href="https://www.ahmadibrahimsec.moe.edu.sg">https://www.ahmadibrahimsec.moe.edu.sg</a></li>
+          <li><a href="https://www.andersonsec.moe.edu.sg">https://www.andersonsec.moe.edu.sg</a></li>
+          <li><a href="https://www.anglicanhigh.moe.edu.sg">https://www.anglicanhigh.moe.edu.sg</a></li>
+          <li><a href="https://acsbr.moe.edu.sg">https://acsbr.moe.edu.sg</a></li>
+          <li><a href="https://www.angmokiosec.moe.edu.sg">https://www.angmokiosec.moe.edu.sg</a></li>
+          <li><a href="https://www.assumptionenglish.moe.edu.sg">https://www.assumptionenglish.moe.edu.sg</a></li>
+          <li><a href="https://www.bartleysec.moe.edu.sg">https://www.bartleysec.moe.edu.sg</a></li>
+          <li><a href="https://www.beattysec.moe.edu.sg">https://www.beattysec.moe.edu.sg</a></li>
+          <li><a href="https://www.bedokgreensec.moe.edu.sg">https://www.bedokgreensec.moe.edu.sg</a></li>
+          <li><a href="https://www.bedoksouthsec.moe.edu.sg">https://www.bedoksouthsec.moe.edu.sg</a></li>
+          <li><a href="https://www.bedokviewsec.moe.edu.sg">https://www.bedokviewsec.moe.edu.sg</a></li>
+          <li><a href="https://www.boonlaysec.moe.edu.sg">https://www.boonlaysec.moe.edu.sg</a></li>
+          <li><a href="https://www.bowensec.moe.edu.sg">https://www.bowensec.moe.edu.sg</a></li>
+          <li><a href="https://www.broadricksec.moe.edu.sg">https://www.broadricksec.moe.edu.sg</a></li>
+          <li><a href="https://www.bukitbatoksec.moe.edu.sg">https://www.bukitbatoksec.moe.edu.sg</a></li>
+          <li><a href="https://www.bukitmerahsec.moe.edu.sg">https://www.bukitmerahsec.moe.edu.sg</a></li>
+          <li><a href="https://www.bpghs.moe.edu.sg">https://www.bpghs.moe.edu.sg</a></li>
+          <li><a href="https://www.bukitviewsec.moe.edu.sg">https://www.bukitviewsec.moe.edu.sg</a></li>
+          <li><a href="https://www.canberrasec.moe.edu.sg">https://www.canberrasec.moe.edu.sg</a></li>
+          <li><a href="https://www.cedargirlssec.moe.edu.sg">https://www.cedargirlssec.moe.edu.sg</a></li>
+          <li><a href="https://www.changkatchangisec.moe.edu.sg">https://www.changkatchangisec.moe.edu.sg</a></li>
+          <li><a href="https://www.chijkatongconvent.moe.edu.sg">https://www.chijkatongconvent.moe.edu.sg</a></li>
+          <li><a href="https://www.chijsec.edu.sg">https://www.chijsec.edu.sg</a></li>
+          <li><a href="https://www.chijstjosephsconvent.moe.edu.sg">https://www.chijstjosephsconvent.moe.edu.sg</a></li>
+          <li><a href="https://www.chijstnicholasgirls.moe.edu.sg">https://www.chijstnicholasgirls.moe.edu.sg</a></li>
+          <li><a href="https://www.chijsttheresasconvent.moe.edu.sg">https://www.chijsttheresasconvent.moe.edu.sg</a></li>
+          <li><a href="https://www.chuachukangsec.moe.edu.sg">https://www.chuachukangsec.moe.edu.sg</a></li>
+          <li><a href="https://www.christchurchsec.moe.edu.sg">https://www.christchurchsec.moe.edu.sg</a></li>
+          <li><a href="https://www.chungchenghighmain.moe.edu.sg">https://www.chungchenghighmain.moe.edu.sg</a></li>
+          <li><a href="https://www.chungchenghighyishun.moe.edu.sg">https://www.chungchenghighyishun.moe.edu.sg</a></li>
+          <li><a href="https://www.clementitownsec.moe.edu.sg">https://www.clementitownsec.moe.edu.sg</a></li>
+          <li><a href="https://www.commonwealthsec.moe.edu.sg">https://www.commonwealthsec.moe.edu.sg</a></li>
+          <li><a href="https://www.compassvalesec.moe.edu.sg">https://www.compassvalesec.moe.edu.sg</a></li>
+          <li><a href="https://www.crescent.edu.sg">https://www.crescent.edu.sg</a></li>
+          <li><a href="https://www.damaisec.moe.edu.sg">https://www.damaisec.moe.edu.sg</a></li>
+          <li><a href="https://www.deyisec.moe.edu.sg">https://www.deyisec.moe.edu.sg</a></li>
+          <li><a href="https://www.dunearnsec.moe.edu.sg">https://www.dunearnsec.moe.edu.sg</a></li>
+          <li><a href="https://www.dunmanhigh.moe.edu.sg">https://www.dunmanhigh.moe.edu.sg</a></li>
+          <li><a href="https://www.dunmansec.moe.edu.sg">https://www.dunmansec.moe.edu.sg</a></li>
+          <li><a href="https://www.eastspringsec.moe.edu.sg">https://www.eastspringsec.moe.edu.sg</a></li>
+          <li><a href="https://edgefield.sg">https://edgefield.sg</a></li>
+          <li><a href="https://www.evergreensec.moe.edu.sg">https://www.evergreensec.moe.edu.sg</a></li>
+          <li><a href="https://www.fairfieldmethodistsec.moe.edu.sg">https://www.fairfieldmethodistsec.moe.edu.sg</a></li>
+          <li><a href="https://www.fajarsec.moe.edu.sg">https://www.fajarsec.moe.edu.sg</a></li>
+          <li><a href="https://www.fuchunsec.moe.edu.sg">https://www.fuchunsec.moe.edu.sg</a></li>
+          <li><a href="https://www.fuhuasec.moe.edu.sg">https://www.fuhuasec.moe.edu.sg</a></li>
+          <li><a href="https://www.ganengsengsch.moe.edu.sg">https://www.ganengsengsch.moe.edu.sg</a></li>
+          <li><a href="https://www.geylangmethodistsec.moe.edu.sg">https://www.geylangmethodistsec.moe.edu.sg</a></li>
+          <li><a href="https://www.greendalesec.moe.edu.sg">https://www.greendalesec.moe.edu.sg</a></li>
+          <li><a href="https://www.greenridgesec.moe.edu.sg">https://www.greenridgesec.moe.edu.sg</a></li>
+          <li><a href="https://guangyangsec.moe.edu.sg">https://guangyangsec.moe.edu.sg</a></li>
+          <li><a href="https://www.haisingcatholic.moe.edu.sg">https://www.haisingcatholic.moe.edu.sg</a></li>
+          <li><a href="https://www.hillgrovesec.moe.edu.sg">https://www.hillgrovesec.moe.edu.sg</a></li>
+          <li><a href="https://www.holyinnocentshigh.moe.edu.sg">https://www.holyinnocentshigh.moe.edu.sg</a></li>
+          <li><a href="https://www.hougangsec.moe.edu.sg">https://www.hougangsec.moe.edu.sg</a></li>
+          <li><a href="https://www.huayisec.moe.edu.sg">https://www.huayisec.moe.edu.sg</a></li>
+          <li><a href="https://www.hci.edu.sg">https://www.hci.edu.sg</a></li>
+          <li><a href="https://www.junyuansec.moe.edu.sg">https://www.junyuansec.moe.edu.sg</a></li>
+          <li><a href="https://www.jurongsec.moe.edu.sg">https://www.jurongsec.moe.edu.sg</a></li>
+          <li><a href="https://www.jurongwestsec.moe.edu.sg">https://www.jurongwestsec.moe.edu.sg</a></li>
+          <li><a href="https://www.jurongvillesec.moe.edu.sg">https://www.jurongvillesec.moe.edu.sg</a></li>
+          <li><a href="https://www.juyingsec.moe.edu.sg">https://www.juyingsec.moe.edu.sg</a></li>
+          <li><a href="https://www.kentridgesec.moe.edu.sg">https://www.kentridgesec.moe.edu.sg</a></li>
+          <li><a href="https://www.kranjisec.moe.edu.sg">https://www.kranjisec.moe.edu.sg</a></li>
+          <li><a href="https://www.loyangviewsec.moe.edu.sg">https://www.loyangviewsec.moe.edu.sg</a></li>
+          <li><a href="https://www.manjusrisec.moe.edu.sg">https://www.manjusrisec.moe.edu.sg</a></li>
+          <li><a href="https://www.marsilingsec.moe.edu.sgmss">https://www.marsilingsec.moe.edu.sgmss</a></li>
+          <li><a href="https://www.mayflowersec.moe.edu.sg">https://www.mayflowersec.moe.edu.sg</a></li>
+          <li><a href="https://meridiansec.moe.edu.sg">https://meridiansec.moe.edu.sg</a></li>
+          <li><a href="https://www.montfortsec.moe.edu.sg">https://www.montfortsec.moe.edu.sg</a></li>
+          <li><a href="https://nchs.edu.sg">https://nchs.edu.sg</a></li>
+          <li><a href="https://www.nanhuahigh.moe.edu.sg">https://www.nanhuahigh.moe.edu.sg</a></li>
+          <li><a href="https://www.nationaljc.moe.edu.sg">https://www.nationaljc.moe.edu.sg</a></li>
+          <li><a href="https://www.navalbasesec.moe.edu.sg">https://www.navalbasesec.moe.edu.sg</a></li>
+          <li><a href="https://www.newtownsec.moe.edu.sg">https://www.newtownsec.moe.edu.sg</a></li>
+          <li><a href="https://www.ngeeannsec.moe.edu.sg">https://www.ngeeannsec.moe.edu.sg</a></li>
+          <li><a href="https://www.northvistasec.moe.edu.sg">https://www.northvistasec.moe.edu.sg</a></li>
+          <li><a href="https://www.northbrookssec.moe.edu.sg">https://www.northbrookssec.moe.edu.sg</a></li>
+          <li><a href="https://www.northlandsec.moe.edu.sg">https://www.northlandsec.moe.edu.sg</a></li>
+          <li><a href="https://www.nushigh.edu.sg">https://www.nushigh.edu.sg</a></li>
+          <li><a href="https://www.orchidparksec.moe.edu.sg">https://www.orchidparksec.moe.edu.sg</a></li>
+          <li><a href="https://www.outramsec.moe.edu.sg">https://www.outramsec.moe.edu.sg</a></li>
+          <li><a href="https://www.prcss.moe.edu.sg">https://www.prcss.moe.edu.sg</a></li>
+          <li><a href="https://pasirrissec.moe.edu.sg">https://pasirrissec.moe.edu.sg</a></li>
+          <li><a href="https://www.plmgss.moe.edu.sg">https://www.plmgss.moe.edu.sg</a></li>
+          <li><a href="https://www.peihwasec.moe.edu.sg">https://www.peihwasec.moe.edu.sg</a></li>
+          <li><a href="https://www.peicaisec.moe.edu.sg">https://www.peicaisec.moe.edu.sg</a></li>
+          <li><a href="https://www.peircesec.moe.edu.sg">https://www.peircesec.moe.edu.sg</a></li>
+          <li><a href="https://www.pingyisec.moe.edu.sg">https://www.pingyisec.moe.edu.sg</a></li>
+          <li><a href="https://www.presbyterian.moe.edu.sg">https://www.presbyterian.moe.edu.sg</a></li>
+          <li><a href="https://www.punggolsec.moe.edu.sg">https://www.punggolsec.moe.edu.sg</a></li>
+          <li><a href="https://www.queenstownsec.moe.edu.sg">https://www.queenstownsec.moe.edu.sg</a></li>
+          <li><a href="https://www.queenswaysec.moe.edu.sg">https://www.queenswaysec.moe.edu.sg</a></li>
+          <li><a href="https://www.rgs.edu.sg">https://www.rgs.edu.sg</a></li>
+          <li><a href="https://www.ri.edu.sg">https://www.ri.edu.sg</a></li>
+          <li><a href="https://www.regentsec.moe.edu.sg">https://www.regentsec.moe.edu.sg</a></li>
+          <li><a href="https://www.riversidesec.moe.edu.sg">https://www.riversidesec.moe.edu.sg</a></li>
+          <li><a href="https://www.rivervalleyhigh.moe.edu.sg">https://www.rivervalleyhigh.moe.edu.sg</a></li>
+          <li><a href="https://www.standrewssec.moe.edu.sg">https://www.standrewssec.moe.edu.sg</a></li>
+          <li><a href="https://www.stpatricks.moe.edu.sg">https://www.stpatricks.moe.edu.sg</a></li>
+          <li><a href="https://www.sst.edu.sg">https://www.sst.edu.sg</a></li>
+          <li><a href="https://www.sota.edu.sg">https://www.sota.edu.sg</a></li>
+          <li><a href="https://www.sembawangsec.moe.edu.sg">https://www.sembawangsec.moe.edu.sg</a></li>
+          <li><a href="https://www.sengkangsec.moe.edu.sg">https://www.sengkangsec.moe.edu.sg</a></li>
+          <li><a href="https://www.sgs.edu.sg">https://www.sgs.edu.sg</a></li>
+          <li><a href="https://www.serangoonsec.moe.edu.sg">https://www.serangoonsec.moe.edu.sg</a></li>
+          <li><a href="https://www.springfieldsec.moe.edu.sg">https://www.springfieldsec.moe.edu.sg</a></li>
+          <li><a href="https://www.stanthonyscanossiansec.moe.edu.sg">https://www.stanthonyscanossiansec.moe.edu.sg</a></li>
+          <li><a href="https://www.stgabrielssec.moe.edu.sg">https://www.stgabrielssec.moe.edu.sg</a></li>
+          <li><a href="https://www.sthildassec.moe.edu.sg">https://www.sthildassec.moe.edu.sg</a></li>
+          <li><a href="https://www.stmargaretssec.moe.edu.sg">https://www.stmargaretssec.moe.edu.sg</a></li>
+          <li><a href="https://www.sji.edu.sg">https://www.sji.edu.sg</a></li>
+          <li><a href="https://www.swisscottagesec.moe.edu.sg">https://www.swisscottagesec.moe.edu.sg</a></li>
+          <li><a href="https://www.tanglinsec.moe.edu.sg">https://www.tanglinsec.moe.edu.sg</a></li>
+          <li><a href="https://www.tampinessec.moe.edu.sg">https://www.tampinessec.moe.edu.sg</a></li>
+          <li><a href="https://www.tkgs.moe.edu.sg">https://www.tkgs.moe.edu.sg</a></li>
+          <li><a href="https://www.tanjongkatongsec.moe.edu.sg">https://www.tanjongkatongsec.moe.edu.sg</a></li>
+          <li><a href="https://www.teckwhyesec.moe.edu.sg">https://www.teckwhyesec.moe.edu.sg</a></li>
+          <li><a href="https://www.temasekjc.moe.edu.sg">https://www.temasekjc.moe.edu.sg</a></li>
+          <li><a href="https://www.temaseksec.moe.edu.sg">https://www.temaseksec.moe.edu.sg</a></li>
+          <li><a href="https://www.unitysec.moe.edu.sg">https://www.unitysec.moe.edu.sg</a></li>
+          <li><a href="https://www.westspringsec.moe.edu.sg">https://www.westspringsec.moe.edu.sg</a></li>
+          <li><a href="https://www.westwoodsec.moe.edu.sg">https://www.westwoodsec.moe.edu.sg</a></li>
+          <li><a href="https://www.whitleysec.moe.edu.sg">https://www.whitleysec.moe.edu.sg</a></li>
+          <li><a href="https://www.woodgrovesec.moe.edu.sg">https://www.woodgrovesec.moe.edu.sg</a></li>
+          <li><a href="https://www.woodlandsringsec.moe.edu.sg">https://www.woodlandsringsec.moe.edu.sg</a></li>
+          <li><a href="https://www.woodlandssec.moe.edu.sg">https://www.woodlandssec.moe.edu.sg</a></li>
+          <li><a href="https://www.yiochukangsec.moe.edu.sg">https://www.yiochukangsec.moe.edu.sg</a></li>
+          <li><a href="https://www.yishunsec.moe.edu.sg">https://www.yishunsec.moe.edu.sg</a></li>
+          <li><a href="https://www.yishuntownsec.moe.edu.sg">https://www.yishuntownsec.moe.edu.sg</a></li>
+          <li><a href="https://www.yuanchingsec.moe.edu.sg">https://www.yuanchingsec.moe.edu.sg</a></li>
+          <li><a href="https://www.yuhuasec.moe.edu.sg">https://www.yuhuasec.moe.edu.sg</a></li>
+          <li><a href="https://www.yusofishaksec.moe.edu.sg">https://www.yusofishaksec.moe.edu.sg</a></li>
+          <li><a href="https://www.yuyingsec.moe.edu.sg">https://www.yuyingsec.moe.edu.sg</a></li>
+          <li><a href="https://www.zhenghuasec.moe.edu.sg">https://www.zhenghuasec.moe.edu.sg</a></li>
+          <li><a href="https://www.zhonghuasec.moe.edu.sg">https://www.zhonghuasec.moe.edu.sg</a></li>
+          <li><a href="https://syas.edu.sg">https://syas.edu.sg</a></li>
+          <li><a href="https://www.crestsec.edu.sg">https://www.crestsec.edu.sg</a></li>
+          <li><a href="https://www.spectra.edu.sg">https://www.spectra.edu.sg</a></li>
+        </ul>
+        <a class="back" href="#top">Back to top</a>
+      </section>
+      <section id="junior-colleges" aria-labelledby="junior-colleges-heading">
+        <div class="section-heading">
+          <h2 id="junior-colleges-heading">Junior colleges</h2>
+          <p class="count">22 links</p>
+        </div>
+        <ul class="school-list">
+          <li><a href="https://asrjc.moe.edu.sg">https://asrjc.moe.edu.sg</a></li>
+          <li><a href="https://acjc.moe.edu.sg">https://acjc.moe.edu.sg</a></li>
+          <li><a href="https://www.acsindep.moe.edu.sg">https://www.acsindep.moe.edu.sg</a></li>
+          <li><a href="https://cjc.moe.edu.sg">https://cjc.moe.edu.sg</a></li>
+          <li><a href="https://dunmanhigh.moe.edu.sg">https://dunmanhigh.moe.edu.sg</a></li>
+          <li><a href="https://eunoiajc.moe.edu.sg">https://eunoiajc.moe.edu.sg</a></li>
+          <li><a href="https://www.hci.edu.sg">https://www.hci.edu.sg</a></li>
+          <li><a href="https://jpjc.moe.edu.sg">https://jpjc.moe.edu.sg</a></li>
+          <li><a href="https://www.millenniainstitute.moe.edu.sg">https://www.millenniainstitute.moe.edu.sg</a></li>
+          <li><a href="https://www.nushigh.edu.sg">https://www.nushigh.edu.sg</a></li>
+          <li><a href="https://nanyangjc.moe.edu.sg">https://nanyangjc.moe.edu.sg</a></li>
+          <li><a href="https://nationaljc.moe.edu.sg">https://nationaljc.moe.edu.sg</a></li>
+          <li><a href="https://www.ri.edu.sg">https://www.ri.edu.sg</a></li>
+          <li><a href="https://rivervalleyhigh.moe.edu.sg">https://rivervalleyhigh.moe.edu.sg</a></li>
+          <li><a href="https://www.sota.edu.sg">https://www.sota.edu.sg</a></li>
+          <li><a href="https://www.sportsschool.edu.sg">https://www.sportsschool.edu.sg</a></li>
+          <li><a href="https://standrewsjc.moe.edu.sg">https://standrewsjc.moe.edu.sg</a></li>
+          <li><a href="https://www.sji.edu.sg">https://www.sji.edu.sg</a></li>
+          <li><a href="https://tmjc.moe.edu.sg">https://tmjc.moe.edu.sg</a></li>
+          <li><a href="https://temasekjc.moe.edu.sg">https://temasekjc.moe.edu.sg</a></li>
+          <li><a href="https://victoriajc.moe.edu.sg">https://victoriajc.moe.edu.sg</a></li>
+          <li><a href="https://www.yijc.moe.edu.sg">https://www.yijc.moe.edu.sg</a></li>
+        </ul>
+        <a class="back" href="#top">Back to top</a>
+      </section>
+      <section id="polytechnics" aria-labelledby="polytechnics-heading">
+        <div class="section-heading">
+          <h2 id="polytechnics-heading">Polytechnics</h2>
+          <p class="count">5 links</p>
+        </div>
+        <ul class="school-list">
+          <li><a href="https://www.sp.edu.sg">https://www.sp.edu.sg</a></li>
+          <li><a href="https://www.np.edu.sg">https://www.np.edu.sg</a></li>
+          <li><a href="https://www.tp.edu.sg">https://www.tp.edu.sg</a></li>
+          <li><a href="https://www.rp.edu.sg">https://www.rp.edu.sg</a></li>
+          <li><a href="https://www.nyp.edu.sg">https://www.nyp.edu.sg</a></li>
+        </ul>
+        <a class="back" href="#top">Back to top</a>
+      </section>
+      <section id="ite" aria-labelledby="ite-heading">
+        <div class="section-heading">
+          <h2 id="ite-heading">ITE</h2>
+          <p class="count">1 link</p>
+        </div>
+        <ul class="school-list">
+          <li><a href="https://www.ite.edu.sg">https://www.ite.edu.sg</a></li>
+        </ul>
+        <a class="back" href="#top">Back to top</a>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <p>Part of <a href="https://theprawnprojects.hong-yi.me/">The Prawn Projects</a>.</p>
+        <p><a href="https://github.com/hongyime/sgSchools2020">Source and archive history</a> · <a href="./maps.txt">Original map reference</a></p>
+      </div>
+    </footer>
   </body>
 </html>
